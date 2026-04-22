@@ -2,9 +2,13 @@
 
 A scalable, secure REST API and React frontend built for the Primetrade.ai Backend Developer Internship assignment. This project demonstrates modular architecture, secure data handling, and a functional user interface.
 
+🚀 **Live Frontend Demo:** [View Deployed Dashboard Here](https://primetrade-ai-assignment-phi.vercel.app)
+🔌 **Live Backend API:** `https://primetrade-ai-assignment-r2vt.onrender.com/api/v1`
+
 ## Tech Stack
 * **Backend:** Node.js, Express.js, PostgreSQL (Raw SQL queries for optimized performance)
 * **Frontend:** React.js, Tailwind CSS, Axios
+* **Deployment:** Vercel (Frontend), Render (Backend API)
 * **Security:** JWT Authentication, Bcrypt Password Hashing, Role-Based Access Control (RBAC)
 
 ## Included APIs (Core Endpoints)
@@ -29,11 +33,15 @@ A scalable, secure REST API and React frontend built for the Primetrade.ai Backe
 ## Local Setup Instructions
 
 ### 1. Database & Environment Configuration
-Navigate to the backend directory and create your environment file. **Security Note: Never commit the actual `.env` file to version control.**
+Navigate to the `backend` directory and create your secure environment configuration file. 
+**Security Note: Never commit your environment variables to version control. Verify your `.gitignore` is active.**
 
-Create a file named `.env` at the path `backend/.env` and include these exact keys:
+Set up a local `.env` file containing your specific PostgreSQL connection string, preferred local port, and a secure JWT secret key.
 
-```env
-PORT=5000
-DATABASE_URL=your_postgresql_connection_string_here
-JWT_SECRET=your_super_secret_jwt_key
+### 2. Start the Backend
+Open a terminal and navigate to the backend folder. *(Note: The database tables `users` and `tasks` will initialize automatically on the first run).*
+
+```bash
+cd backend
+npm install
+npm start

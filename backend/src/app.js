@@ -11,6 +11,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/api/v1', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'API is running successfully!',
+    timestamp: new Date().toISOString()
+  });
+});
+
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/tasks', taskRoutes);
 
